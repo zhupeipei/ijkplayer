@@ -87,6 +87,8 @@ public interface IMediaPlayer {
 
     void prepareAsync() throws IllegalStateException;
 
+    void setOption(int category, String name, long value);
+
     void start() throws IllegalStateException;
 
     void stop() throws IllegalStateException;
@@ -197,6 +199,8 @@ public interface IMediaPlayer {
     void setLooping(boolean looping);
 
     boolean isLooping();
+
+    void setSpeed(float speed);
 
     /*--------------------
      * AndroidMediaPlayer: JELLY_BEAN

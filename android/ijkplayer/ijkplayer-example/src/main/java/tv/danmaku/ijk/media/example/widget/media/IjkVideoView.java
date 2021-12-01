@@ -87,7 +87,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
 
     // All the stuff we need for playing and showing a video
     private IRenderView.ISurfaceHolder mSurfaceHolder = null;
-    private IMediaPlayer mMediaPlayer = null;
+    public IMediaPlayer mMediaPlayer = null;
     // private int         mAudioSession;
     private int mVideoWidth;
     private int mVideoHeight;
@@ -347,6 +347,7 @@ public class IjkVideoView extends FrameLayout implements MediaController.MediaPl
             mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             mMediaPlayer.setScreenOnWhilePlaying(true);
             mPrepareStartTime = System.currentTimeMillis();
+            mMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "soundtouch", 1);
             mMediaPlayer.prepareAsync();
             if (mHudViewHolder != null)
                 mHudViewHolder.setMediaPlayer(mMediaPlayer);

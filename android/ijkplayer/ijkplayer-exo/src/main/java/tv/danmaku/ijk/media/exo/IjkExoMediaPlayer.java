@@ -122,6 +122,11 @@ public class IjkExoMediaPlayer extends AbstractMediaPlayer {
     }
 
     @Override
+    public void setOption(int category, String name, long value) {
+        
+    }
+
+    @Override
     public void start() throws IllegalStateException {
         if (mInternalPlayer == null)
             return;
@@ -243,6 +248,11 @@ public class IjkExoMediaPlayer extends AbstractMediaPlayer {
     public boolean isLooping() {
         // TODO: no support
         return false;
+    }
+
+    @Override
+    public void setSpeed(float speed) {
+        
     }
 
     @Override

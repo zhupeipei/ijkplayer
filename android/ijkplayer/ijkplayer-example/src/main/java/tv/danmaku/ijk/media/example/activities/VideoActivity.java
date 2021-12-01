@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -151,6 +152,13 @@ public class VideoActivity extends AppCompatActivity implements TracksFragment.I
             return;
         }
         mVideoView.start();
+
+        findViewById(R.id.main_speed_up_tv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mVideoView.mMediaPlayer.setSpeed(2f);
+            }
+        });
     }
 
     @Override

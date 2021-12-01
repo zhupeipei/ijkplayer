@@ -93,6 +93,11 @@ public class MediaPlayerProxy implements IMediaPlayer {
     }
 
     @Override
+    public void setOption(int category, String name, long value) {
+
+    }
+
+    @Override
     public void start() throws IllegalStateException {
         mBackEndMediaPlayer.start();
     }
@@ -335,5 +340,10 @@ public class MediaPlayerProxy implements IMediaPlayer {
     @Override
     public boolean isLooping() {
         return mBackEndMediaPlayer.isLooping();
+    }
+
+    @Override
+    public void setSpeed(float speed) {
+
     }
 }

@@ -167,6 +167,11 @@ public class AndroidMediaPlayer extends AbstractMediaPlayer {
     }
 
     @Override
+    public void setOption(int category, String name, long value) {
+
+    }
+
+    @Override
     public void start() throws IllegalStateException {
         mInternalMediaPlayer.start();
     }
@@ -275,6 +280,11 @@ public class AndroidMediaPlayer extends AbstractMediaPlayer {
     @Override
     public boolean isLooping() {
         return mInternalMediaPlayer.isLooping();
+    }
+
+    @Override
+    public void setSpeed(float speed) {
+
     }
 
     @Override

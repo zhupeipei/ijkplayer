@@ -746,6 +746,7 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
 
     private native int _getLoopCount();
 
+    @Override
     public void setSpeed(float speed) {
         _setPropertyFloat(FFP_PROP_FLOAT_PLAYBACK_RATE, speed);
     }
@@ -908,6 +909,7 @@ public final class IjkMediaPlayer extends AbstractMediaPlayer {
         _setOption(category, name, value);
     }
 
+    @Override
     public void setOption(int category, String name, long value)
     {
         _setOption(category, name, value);
